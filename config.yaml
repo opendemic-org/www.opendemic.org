@@ -1,0 +1,190 @@
+baseURL: https://www.opendemic.org/
+languageCode: en-us
+title: Opendemic
+theme: hugo-fresh
+googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
+# Disables warnings
+disableKinds:
+- taxonomy
+- taxonomyTerm
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Allows you to write raw html in your md files
+
+params:
+  # Open graph allows easy social sharing. If you don't want it you can set it to false or just delete the variable
+  openGraph: true
+  # Used as meta data; describe your site to make Google Bots happy
+  description: Anonymous COVID19 Proximity Alerts
+  navbarlogo:
+  # Logo (from static/images/logos/___)
+    image: logos/opendemic.png
+    link: /
+  font:
+    name: "Open Sans"
+    sizes: [400,600]
+  hero:
+    # Main hero title
+    title: Anonymous COVID19 Proximity Alerts
+    # Hero subtitle (optional)
+    subtitle: Anonymously share your location and symptoms to get potential and verified COVID19 proximity alerts
+    # Button text
+    buttontext: Get Started
+    # Where the main hero button links to
+    buttonlink: "http://human.opendemic.org/?ref=landing"
+    # Telegram link
+    telegramlink: "https://t.me/OpendemicBot"
+    # Terms and Privacy Policy
+    privacy_url: /privacy
+    terms_url: /terms
+    # Hero image (from static/images/___)
+    image: illustrations/city_location.svg
+    # Footer logos (from static/images/logos/clients/___.svg)
+    clientlogos:
+    - harvard
+    - cornell_clear
+    - aws
+    # - tribe
+    # - kromo
+    # - infinite
+    # - gutwork
+  # Customizable navbar. For a dropdown, add a "sublinks" list.
+  navbar:
+  - title: Features
+    url: /#section1
+  - title: Contributors
+    url: /about
+  - title: For Organizations
+    url: /#section2
+  - title: Privacy
+    url: /privacy
+  # - title: Dropdown
+  #   sublinks:
+  #   - title: Dropdown item
+  #     url: /
+  #   - title: Dropdown item
+  #     url: /
+  #   - title: Dropdown item
+  #     url: /
+  # - title: Log in
+  #   url: /
+  - title: Get Started
+    url: http://human.opendemic.org/?ref=landing
+    button: true
+  section1:
+    title: COVID-19 Risk Awareness
+    subtitle: for the Conscious Citizen
+    tiles:
+    - title: Share location and health
+      icon: user_map_point
+      text: Get daily reminders to send your GPS location as well as your current health status.
+      # url: /
+      # buttonText: Get started
+    - title: Get proximity alerts
+      icon: map_point
+      text: Opendemic will notify you if you've been in close proximity to a potential COVID-19 case.
+      # url: /
+      # buttonText: Contribute to a global effort
+    - title: Contribute to a global effort
+      icon: map_points
+      text: Opendemic will only share anonymous data with public health authorities.
+      # url: /
+      # buttonText: Get started
+
+
+  section2:
+    title: Are you a public health organization or researcher?
+    subtitle: We are here to help.
+    features:
+    - title: Cross-platform Interfaces
+      text: To maximize accessibility to our platform, we've develop both web as well as chat based interfaces.
+      # Icon (from /images/illustrations/icons/___.svg)
+      icon: laptop-globe
+    - title: Cutomizable Settings
+      text: We understand every partner is unique in its needs. That's why our team is ready to customize our platform to a wide range of deployment specifications.
+      icon: doc-sync
+    - title: Bidirectional Data Flow
+      text: Whether you need to consume our data or want to contribute to it, we can set up avenues for bidirectional exchange of data as long as it complies with our terms of service and privacy policy.
+      icon: plug-cloud
+  # section3:
+  #   title: One platform
+  #   subtitle: Multiple interfaces
+  #   image: illustrations/mockups/app-mockup.png
+  #   buttonText: Get started
+  #   buttonLink: "#"
+  # section4:
+  #   title: Here is what people are saying!
+  #   # subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+  #   clients:
+  #   - name: Irma
+  #     quote: Hi, I really like your app! I love it and the way you remind people to report their status.
+  #     job:
+  #     img: 1
+  #   - name: John
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job:
+  #     img: 2
+  #   - name: Gary
+  #     quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
+  #     job:
+  #     img: 3
+  section5:
+    title: Drop us a line
+    subtitle: We'd love to hear from you
+    buttonText: Send Message
+    url: https://app.opendemic.org/contact
+    # url: http://127.0.0.1:5000/contact
+  footer:
+    # Logo (from /images/logos/___)
+    logo: opendemic_inv.png
+    # Simple Analytics
+    simpleanalyticsURL: https://simpleanalytics.com/opendemic.org
+    # Social Media Title
+    socialmediatitle: Stay in Touch
+    # Social media links (GitHub, Twitter, etc.). All are optional.
+    socialmedia:
+    - link: https://github.com/opendemic-org
+      # Icons are from Font Awesome
+      icon: github
+    # - link: https://dribbble.com/#
+    #   icon: dribbble
+    # - link: https://facebook.com/#
+    #   icon: facebook
+    - link: https://twitter.com/opendemic
+      icon: twitter
+    - link: mailto:teamopendemic@gmail.com?subject=Contact
+      icon: envelope
+    # - link: https://twitter.com/opendemic
+    #   icon: instagram
+    # - link: https://bitbucket.org/#
+    #   icon: bitbucket
+    # bulmalogo: true
+    quicklinks:
+      column1:
+        title: "Product"
+        links:
+        - text: Discover features
+          link: /#section1
+        - text: For Organizations
+          link: /#section2
+        - text: User testimonials
+          link: /#section4
+      column2:
+        title: "About"
+        links:
+        - text: Contributors
+          link: /about
+        - text: Privacy Policy
+          link: /privacy
+        - text: Terms & Conditions
+          link: /terms
+        - text: Website Statistics
+          link: https://simpleanalytics.com/opendemic.org
+      column3:
+        title: "Case Studies"
+        links:
+        - text: (coming soon)
+        #   link: /blog/first
+        # - text: Tech articles
+        #   link: /blog/second

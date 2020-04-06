@@ -98,7 +98,7 @@ params:
     subtitle: We are here to help.
     features:
     - title: Cross-platform Interfaces
-      text: To maximize accessibility to our platform, we've develop both web as well as chat based interfaces.
+      text: To maximize accessibility to our platform, we've developed both web as well as chat based interfaces.
       # Icon (from /images/illustrations/icons/___.svg)
       icon: laptop-globe
     - title: Cutomizable Settings

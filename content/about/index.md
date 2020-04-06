@@ -1,12 +1,10 @@
 ---
 title: Hello!
 subtitle: Our mission is to design and implement interventions that help "flatten the curve" during the SARS-CoV-2 pandemic.
+date: 2020-04-04T17:13:49-04:00
+draft: false
 type: about
 layout: about
-draft: false
-
-# include footer at the end of file
-include_footer: true
 
 # contributors
 contributors:
@@ -37,6 +35,7 @@ contributors:
     - name: Marco Berlot
       img_url: /images/headshots/marco_berlot.png
       linkedin_url: https://www.linkedin.com/in/marco-berlot-1a9385117/
----
 
-# some other content
+# include footer at the end of file
+include_footer: true
+---

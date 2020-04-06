@@ -13,7 +13,14 @@
 
     {{ block "main" . }}
 
-    {{ partial "single/single.html" . }}
+    <!-- Layout selector -->
+    {{ if eq .Params.layout "about" }}
+      {{ partial "about/single.html" . }}
+    {{ else if eq .Params.layout "legal" }}
+      {{ partial "single/single.html" . }}
+    {{ else }}
+      {{ partial "single/single.html" . }}
+    {{ end }}
 
     {{ if .Params.include_footer }}
     {{ partial "footer.html" . }}

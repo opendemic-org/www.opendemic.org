@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
 	<meta name="generator" content="Hugo 0.68.3" />
-    
+
 
 <meta property="og:title" content="Opendemic" />
 <meta property="og:description" content="Anonymous COVID19 Proximity Alerts" />
@@ -16,23 +16,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Opendemic</title>
-    
+
 <link rel="icon" type="image/png" href="/images/favicon.ico" />
 <link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/css/style.min.b9db22ec3fc8c55fbb3aca91088547cc09719a05bcb8fffc7cf4640f86d8b9db.css" integrity="sha256-udsi7D/IxV&#43;7OsqRCIVHzAlxmgW8uP/8fPRkD4bYuds=">
+<link rel="stylesheet" type="text/css" href="/css/style.min.css" integrity="sha256-udsi7D/IxV&#43;7OsqRCIVHzAlxmgW8uP/8fPRkD4bYuds=">
 <link rel="stylesheet" type="text/css" href="/css/icons.css">
 
   </head>
   <body>
-    
+
     <div id="preloader">
       <div id="status"></div>
     </div>
 
-    
-    
+
+
     <section class="hero is-fullheight is-default is-bold">
-  
+
 
 <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
@@ -73,7 +73,7 @@
   </div>
 </nav>
 
-  
+
 
 <nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
   <div class="container">
@@ -114,7 +114,7 @@
 </div>
 </nav>
 
-  
+
 <div class="hero-body">
   <div class="container">
     <div class="columns">
@@ -122,11 +122,11 @@
         <h1 class="title is-1 is-bold is-spaced">
           Anonymous COVID19 Proximity Alerts
         </h1>
-        
+
         <h2 class="subtitle is-5 is-muted">
           Anonymously share your location and symptoms to get potential and verified COVID19 proximity alerts
         </h2>
-        
+
         <div class="columns is-vcentered">
           <div class="column is-5">
             <p>
@@ -144,13 +144,13 @@
             <p>
               <a class="button cta rounded raised" style="background-color: #0088cc;" href="https://t.me/OpendemicBot">
                 <span style="color: white;">Join on Telegram</span>
-                
+
               </a>
             </p>
           </div>
         </div>
 
-        
+
         <div class="columns is-vcentered">
           <div class="column is-10">
             <p class="has-text-grey-lighter is-italic">* by using our service you accept our
@@ -169,7 +169,7 @@
   </div>
 </div>
 
-  
+
 <div class="hero-foot mb-20">
   <div class="container">
     <div class="tabs is-centered">
@@ -194,10 +194,10 @@
   </div>
 </div>
 </section>
-    
 
-    
-    
+
+
+
 <section id="section1" class="section section-feature-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -219,7 +219,7 @@
             <div class="card-text">
                 <p>Get daily reminders to send your GPS location as well as your current health status.</p>
             </div>
-            
+
           </div>
         </div>
         <div class="column is-one-third">
@@ -233,7 +233,7 @@
             <div class="card-text">
                 <p>Opendemic will notify you if you&#39;ve been in close proximity to a potential COVID-19 case.</p>
             </div>
-            
+
           </div>
         </div>
         <div class="column is-one-third">
@@ -247,7 +247,7 @@
             <div class="card-text">
                 <p>Opendemic will only share anonymous data with public health authorities.</p>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -255,10 +255,10 @@
   </div>
 </section>
 
-    
 
-    
-    
+
+
+
 <section id="section2" class="section is-medium">
   <div class="container">
     <div class="columns">
@@ -321,14 +321,14 @@
   </div>
 </section>
 
-    
 
-    
 
-    
 
-    
-    
+
+
+
+
+
 <section class="section section-light-grey is-medium">
   <div class="container">
     <div class="title-wrapper has-text-centered">
@@ -361,31 +361,31 @@
               function sendData() {
                 const XHR = new XMLHttpRequest();
 
-                
+
                 const FD = new FormData( form );
 
-                
+
                 XHR.addEventListener( "load", function(event) {
                   alert( event.target.responseText );
                   form.reset();
                 } );
 
-                
+
                 XHR.addEventListener( "error", function( event ) {
                   alert( 'Oops! Something went wrong. Please try again later.' );
                 } );
 
-                
+
                 XHR.open( "POST", "https:\/\/app.opendemic.org\/contact" );
 
-                
+
                 XHR.send( FD );
               }
 
-              
+
               let form = document.getElementById( "contact-form" );
 
-              
+
               form.addEventListener( "submit", function ( event ) {
                 event.preventDefault();
                 sendData();
@@ -398,10 +398,10 @@
   </div>
 </section>
 
-    
 
-    
-    
+
+
+
 <footer class="footer footer-dark">
 
   <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
@@ -499,7 +499,7 @@
               </div>
             </nav>
 
-            
+
           </div>
         </div>
       </div>
@@ -507,19 +507,19 @@
   </div>
 </footer>
 
-    
 
-    
+
+
     <div id="backtotop"><a href="#"></a></div>
 
-    
-    
 
 
-    
+
+
+
     <div id="backtotop"><a href="#"></a></div>
 
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>

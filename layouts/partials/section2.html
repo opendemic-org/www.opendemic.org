@@ -12,22 +12,25 @@
       </div>
       <div class="column is-7 mt-60">
         {{- range $features }}
-        <article class="media icon-box">
-          <figure class="media-left">
-            <p class="image">
-              <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
-            </p>
-          </figure>
-          <div class="media-content mt-50">
-            <div class="content">
-              <p>
-                <span class="icon-box-title">{{ .title }}</span>
-
-                <span class="icon-box-text">{{ .text | markdownify }}</span>
+        <div class="columns is-mobile media icon-box">
+          <div class="column is-3" style="padding: 0.5rem;">
+            <figure class="">
+              <p class="image">
+                <img src="{{ printf "/images/illustrations/icons/%s.svg" .icon | relURL }}">
               </p>
+            </figure>
+          </div>
+          <div class="column is-9">
+            <div class="media-content mt-50">
+              <div class="content">
+                <p>
+                  <span class="icon-box-title">{{ .title }}</span>
+                  <span class="icon-box-text">{{ .text | markdownify }}</span>
+                </p>
+              </div>
             </div>
           </div>
-        </article>
+        </div>
         {{- end }}
       </div>
     </div>

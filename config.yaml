@@ -1,7 +1,7 @@
 baseURL: https://www.opendemic.org/
 languageCode: en-us
 title: Opendemic
-theme: hugo-fresh
+# theme: hugo-fresh
 googleAnalytics: # Put in your tracking code without quotes like this: UA-XXXXXX...
 # Disables warnings
 disableKinds:

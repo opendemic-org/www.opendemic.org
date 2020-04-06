@@ -3,6 +3,7 @@ title: Hello!
 subtitle: Our mission is to design and implement interventions that help "flatten the curve" during the SARS-CoV-2 pandemic.
 type: about
 layout: about
+draft: false
 
 # include footer at the end of file
 include_footer: true

@@ -30,9 +30,9 @@ params:
     # Hero subtitle (optional)
     subtitle: Anonymously share your location and symptoms to get potential and verified COVID19 proximity alerts
     # Button text
-    buttontext: Get Started
+    buttontext: App coming soon # Get Started
     # Where the main hero button links to
-    buttonlink: "http://human.opendemic.org/?ref=landing"
+    buttonlink: # "http://human.opendemic.org/?ref=landing"
     # Telegram link
     telegramlink: "https://t.me/OpendemicBot"
     # Terms and Privacy Policy
@@ -69,9 +69,9 @@ params:
   #     url: /
   # - title: Log in
   #   url: /
-  - title: Get Started
-    url: http://human.opendemic.org/?ref=landing
-    button: true
+  - title: # App coming soon # Get Started
+    url: # http://human.opendemic.org/?ref=landing
+    button: false
   section1:
     title: COVID-19 Risk Awareness
     subtitle: for the Conscious Citizen

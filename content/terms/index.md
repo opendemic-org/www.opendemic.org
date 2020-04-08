@@ -5,6 +5,9 @@ date: 2020-04-05T17:13:49-04:00
 draft: false
 type: legal
 layout: legal
+
+# include footer at the end of file
+include_footer: true
 ---
 
 AGREEMENT TO TERMS

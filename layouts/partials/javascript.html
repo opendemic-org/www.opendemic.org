@@ -4,3 +4,6 @@
 <script src="{{ "js/jquery.panelslider.min.js" | relURL }}"></script>
 <script src="{{ "js/bulma_modals.js" | relURL }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+{{- $baseURL := .Site.BaseURL }}
+<div class='sharethis-sticky-share-buttons' data-url='{{ $baseURL }}?utm_source=social_share'></div>

@@ -1,8 +1,21 @@
 {{ template "_internal/google_analytics_async.html" . }}
 {{ if eq .Site.Params.openGraph true }}
-{{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
 {{ end }}
-<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Hardcoded description; the author should update :){{ end }}" />
+{{- $keywords    := index .Site.Params "keywords" }}
+{{- $navbarLogo     := .Site.Params.navbarlogo }}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{ .Site.Title }}">
+<meta name="description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}Hardcoded description; the author should update :){{ end }}" />
+<meta content="{{ delimit $keywords ", " }}" name="keywords">
+
+<!-- Share This -->
+<script
+  type='text/javascript'
+  src='https://platform-api.sharethis.com/js/sharethis.js#property=5e8e4d4aa034e50012b52ce6&product=sticky-share-buttons&cms=website'
+  async='async'></script>

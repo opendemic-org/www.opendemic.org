@@ -1,4 +1,4 @@
-baseURL: https://www.opendemic.org/
+baseURL: https://www.opendemic.org
 languageCode: en-us
 title: Opendemic
 # theme: hugo-fresh
@@ -75,10 +75,10 @@ params:
     url: /#section2
   - title: Privacy
     url: /privacy
-  - title: Share It
-    url: "#"
-    button: true
-    id: nav-share-btn
+  # - title: Share It
+  #   url: "#"
+  #   button: true
+  #   id: nav-share-btn
   # - title: Dropdown
   #   sublinks:
   #   - title: Dropdown item

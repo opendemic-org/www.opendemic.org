@@ -27,11 +27,6 @@ contributors:
     - name: Matteo Frigo
       img_url: /images/headshots/matteo_frigo.jpeg
       linkedin_url: https://www.linkedin.com/in/matteofrigo/
-    - name: Niki Francesca
-      img_url: /images/headshots/niki_francesca.png
-      linkedin_url: https://www.linkedin.com/in/nikifrancesca/
-  contributors_section_3:
-    individuals:
     - name: Marco Berlot
       img_url: /images/headshots/marco_berlot.png
       linkedin_url: https://www.linkedin.com/in/marco-berlot-1a9385117/

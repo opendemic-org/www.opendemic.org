@@ -2,12 +2,14 @@
 {{- $sidebarVisible := .Site.Params.sidebar }}
 {{- $title    := .Site.Title }}
 {{- $description := .Site.Params.description }}
-{{- $nav_share_btn_id := .Site.Params.shareBtnId }}
+{{- $nav_subscribe_btn_id := .Site.Params.subscribeBtnId }}
+{{- $nav_subscribe_post_url := .Site.Params.subscribePostURL }}
 {{- $baseURL := .Site.BaseURL }}
 {{ if .Params.sidebar }}
 {{ $sidebarVisible = .Params.sidebar }}
 {{ end }}
 {{- $navbarLogo     := .Site.Params.navbarlogo }}
+
 <nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
@@ -72,7 +74,11 @@
           </div>
           {{- else if .button }}
           <a href="{{ .url }}" class="navbar-item">
+            {{- if .id }}
+            <span id="{{ .id }}" class="button signup-button rounded secondary-btn raised">
+            {{- else }}
             <span class="button signup-button rounded secondary-btn raised">
+            {{- end }}
               {{ .title }}
             </span>
           </a>
@@ -85,4 +91,107 @@
         </div>
       </div>
   </div>
+  <div id="subscribe-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <form id="subscribe-form">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Stay in Touch!</p>
+          <a class="delete" aria-label="close"></a>
+        </header>
+        <section class="modal-card-body">
+          <div class="content">
+
+            <div class="field">
+              <label class="label is-medium">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input id="subscribe-email-input" name="subscribe-email" class="input is-medium" type="email" placeholder="Enter email">
+                <span class="icon is-medium is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+
+            <hr class="hr-text" data-content="OR">
+
+            <div class="field">
+              <label class="label is-medium">Phone</label>
+              <div class="control has-icons-left has-icons-right">
+                <input id="subscribe-phone-input" name="subscribe-phone" class="input is-medium" type="tel" placeholder="Enter phone with international prefix">
+                <span class="icon is-medium is-left">
+                  <i class="fa fa-phone"></i>
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <article class="message is-success">
+            <div class="message-body">
+              <strong>Privacy notice:</strong> by default, your contact information will be kept separate from any location or health information you provide. It will only be used to  send important service notifications and will not be shared with third parties.
+            </div>
+          </article>
+        </section>
+        <footer class="modal-card-foot">
+          <div class="control">
+            <button type="submit" class="button secondary-btn" style="font-weight: bold;">Submit</button>
+          </div>
+
+        </footer>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function runSubscribeBtnLogic() {
+      const btn = document.getElementById('{{ $nav_subscribe_btn_id }}');
+      btn.addEventListener('click', async () => {
+        openModal("subscribe-modal");
+      });
+    }
+
+    // in case the document is already rendered
+    if (document.readyState!='loading') runSubscribeBtnLogic();
+    // modern browsers
+    else if (document.addEventListener) document.addEventListener('DOMContentLoaded', runSubscribeBtnLogic);
+    // IE <= 8
+    else document.attachEvent('onreadystatechange', function(){
+        if (document.readyState=='complete') runSubscribeBtnLogic();
+    });
+
+
+    window.addEventListener( "load", function () {
+      function submitSubscriptionForm() {
+        const XHR = new XMLHttpRequest();
+
+        // Bind the FormData object and the form element
+        const FD = new FormData( form );
+
+        // Define what happens on successful data submission
+        XHR.addEventListener( "load", function(event) {
+          alert( event.target.responseText );
+          form.reset();
+        } );
+
+        // Define what happens in case of error
+        XHR.addEventListener( "error", function( event ) {
+          alert( 'Oops! Something went wrong. Please try again later.' );
+        } );
+
+        // Set up our request
+        XHR.open( "POST", "{{ $nav_subscribe_post_url }}" );
+
+        // The data sent is what the user provided in the form
+        XHR.send( FD );
+      }
+
+      // Access the form element...
+      let form = document.getElementById( "subscribe-form" );
+
+      // ...and take over its submit event.
+      form.addEventListener( "submit", function ( event ) {
+        event.preventDefault();
+        submitSubscriptionForm();
+      } );
+      } );
+
+  </script>
 </nav>

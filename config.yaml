@@ -49,7 +49,7 @@ params:
     # Button text
     buttontext: Get Started
     # Where the main hero button links to
-    buttonlink: "http://human.opendemic.org/?ref=landing"
+    buttonlink: "https://human.opendemic.org/?ref=landing"
     # Telegram link
     telegramlink: "https://t.me/OpendemicBot"
     # Terms and Privacy Policy
@@ -67,7 +67,8 @@ params:
     # - infinite
     # - gutwork
   # Customizable navbar. For a dropdown, add a "sublinks" list.
-  shareBtnId: nav-share-btn
+  subscribeBtnId: nav-subscribe-btn
+  subscribePostURL: "https://app.opendemic.org/subscribe"
   navbar:
   - title: Features
     url: /#section1
@@ -75,10 +76,10 @@ params:
     url: /#section2
   - title: Privacy
     url: /privacy
-  - title: Get Started
-    url: "http://human.opendemic.org/?ref=landing"
+  - title: Sign Up for Updates
+    url: "#"
     button: true
-  #   id: nav-share-btn
+    id: nav-subscribe-btn
   # - title: Dropdown
   #   sublinks:
   #   - title: Dropdown item

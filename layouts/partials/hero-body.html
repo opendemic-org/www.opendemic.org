@@ -22,7 +22,10 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <p>
-              <a class="button cta rounded primary-btn raised" href="{{ $buttonLink }}">
+              <a
+                class="button cta rounded primary-btn raised"
+                href="{{ $buttonLink }}"
+                onclick="onclick_get_started()">
                 {{ $buttonText }}
               </a>
             </p>
@@ -52,6 +55,12 @@
             sa_event('clicked[Join on Telegram]');
             console.log('clicked[Join on Telegram]');
           }
+
+          function onclick_get_started(){
+            sa_event('clicked[Get Started]');
+            console.log('clicked[Get Started]');
+          }
+
         </script>
 
         <!-- privacy statement -->

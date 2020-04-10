@@ -72,11 +72,7 @@
           </div>
           {{- else if .button }}
           <a href="{{ .url }}" class="navbar-item">
-            {{- if .id }}
-            <span id="{{ .id }}" class="button signup-button rounded secondary-btn raised">
-            {{- else }}
             <span class="button signup-button rounded secondary-btn raised">
-            {{- end }}
               {{ .title }}
             </span>
           </a>
@@ -89,50 +85,4 @@
         </div>
       </div>
   </div>
-  <div id="social-share-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Spread the word!</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-          <div class="sharethis-inline-share-buttons"></div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button">Close</button>
-      </footer>
-    </div>
-  </div>
-  <script type="text/javascript">
-    function runShareBtnLogic() {
-      const btn = document.getElementById('{{ $nav_share_btn_id }}');
-      btn.addEventListener('click', async () => {
-        if(navigator.share !== undefined) {
-          try {
-            await navigator.share({
-              title: '{{ $title }}',
-              url: '{{ $baseURL }}?utm_source=landing_share',
-            });
-            console.log("Data was shared successfully");
-          } catch(err) {
-            console.error("Share failed:", err.message);
-          }
-        } else {
-          openModal("social-share-modal");
-          console.log("nav share is available");
-        }
-      });
-    }
-
-    // in case the document is already rendered
-    if (document.readyState!='loading') runShareBtnLogic();
-    // modern browsers
-    else if (document.addEventListener) document.addEventListener('DOMContentLoaded', runShareBtnLogic);
-    // IE <= 8
-    else document.attachEvent('onreadystatechange', function(){
-        if (document.readyState=='complete') runShareBtnLogic();
-    });
-
-  </script>
 </nav>

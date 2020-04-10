@@ -45,11 +45,11 @@ params:
     # Main hero title
     title: Anonymous COVID19 Proximity Alerts
     # Hero subtitle (optional)
-    subtitle: Anonymously share your location and symptoms to get potential and verified COVID19 proximity alerts
+    subtitle: Anonymously share your location and symptoms to get potential and official COVID19 proximity alerts
     # Button text
-    buttontext: App coming soon # Get Started
+    buttontext: Get Started
     # Where the main hero button links to
-    buttonlink: # "http://human.opendemic.org/?ref=landing"
+    buttonlink: "http://human.opendemic.org/?ref=landing"
     # Telegram link
     telegramlink: "https://t.me/OpendemicBot"
     # Terms and Privacy Policy
@@ -75,9 +75,9 @@ params:
     url: /#section2
   - title: Privacy
     url: /privacy
-  # - title: Share It
-  #   url: "#"
-  #   button: true
+  - title: Get Started
+    url: "http://human.opendemic.org/?ref=landing"
+    button: true
   #   id: nav-share-btn
   # - title: Dropdown
   #   sublinks:
@@ -96,9 +96,9 @@ params:
     title: COVID-19 Risk Awareness
     subtitle: for the Conscious Citizen
     tiles:
-    - title: Share location and health
+    - title: Share location and symptoms
       icon: user_map_point
-      text: Get daily reminders to send your GPS location as well as your current health status.
+      text: Get daily reminders to send your GPS location as well as your current symptoms.
       # url: /
       # buttonText: Get started
     - title: Get proximity alerts

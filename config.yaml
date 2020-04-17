@@ -99,17 +99,17 @@ params:
     tiles:
     - title: Share location and symptoms
       icon: user_map_point
-      text: Get daily reminders to send your GPS location as well as your current symptoms.
+      text: Anonymously share your location and symptoms. We encrypt your data in transit and at rest for additional security.
       # url: /
       # buttonText: Get started
     - title: Get proximity alerts
       icon: map_point
-      text: Opendemic will notify you if you've been in close proximity to a potential COVID-19 case.
+      text: Opendemic will notify you if you've been in close proximity to a potential or confirmed COVID-19 case.
       # url: /
       # buttonText: Contribute to a global effort
     - title: Contribute to a global effort
       icon: map_points
-      text: Opendemic will only share anonymous data with public health authorities.
+      text: Opendemic will only share anonymous data with public health authorities and research groups.
       # url: /
       # buttonText: Get started
 

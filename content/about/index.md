@@ -24,9 +24,9 @@ contributors:
     - name: David Sasson
       img_url: /images/headshots/david_sasson.jpeg
       linkedin_url: https://www.linkedin.com/in/david-sasson/
-    - name: Matteo Frigo
-      img_url: /images/headshots/matteo_frigo.jpeg
-      linkedin_url: https://www.linkedin.com/in/matteofrigo/
+    # - name: Matteo Frigo
+    #   img_url: /images/headshots/matteo_frigo.jpeg
+    #   linkedin_url: https://www.linkedin.com/in/matteofrigo/
     - name: Marco Berlot
       img_url: /images/headshots/marco_berlot.png
       linkedin_url: https://www.linkedin.com/in/marco-berlot-1a9385117/

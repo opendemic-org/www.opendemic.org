@@ -18,12 +18,14 @@
       {{ partial "about/single.html" . }}
     {{ else if eq .Params.layout "legal" }}
       {{ partial "single/single.html" . }}
+    {{ else if eq .Params.layout "press" }}
+      {{ partial "single/single.html" . }}
     {{ else }}
       {{ partial "single/single.html" . }}
     {{ end }}
 
     {{ if .Params.include_footer }}
-    {{ partial "footer.html" . }}
+      {{ partial "footer.html" . }}
     {{ end }}
 
     <!-- Back To Top Button -->

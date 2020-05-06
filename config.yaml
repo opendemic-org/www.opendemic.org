@@ -203,9 +203,9 @@ params:
         - text: Website Statistics
           link: https://simpleanalytics.com/opendemic.org
       column3:
-        title: "Case Studies"
+        title: "Resources"
         links:
-        - text: (coming soon)
-        #   link: /blog/first
+        - text: Press
+          link: /press
         # - text: Tech articles
         #   link: /blog/second

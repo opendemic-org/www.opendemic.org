@@ -23,3 +23,4 @@ include_footer: true
 - **Cornell Computer Science** | [Cornell Tech Alumnus Develops Health App to Address COVID-19-related Data Needs](https://www.cs.cornell.edu/information/news/newsitem11131/cornell-tech-alumnus-develops-health-app-address-covid-19-related)
 - **Monitor Expresso** | [Crean aplicación que permite visualizar casos de Covid-19 cerca de sus usuarios](https://www.monitorexpresso.com/crean-aplicacion-que-permite-visualizar-casos-de-covid-19-cerca-de-sus-usuarios/)
 - **Alan Turing Institute** | [List of symptom tracker apps and websites](https://alan-turing-institute.github.io/COVID-19_PSTC/Symptom_tracker_apps_and_websites.html)
+- **ScreenRant** | [App Alerts You After Close Proximity To Potential Coronavirus Cases](https://screenrant.com/opendemic-coronavirus-proximity-app-explained/)

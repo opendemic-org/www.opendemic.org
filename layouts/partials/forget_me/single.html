@@ -11,7 +11,17 @@
       </div>
     </div>
     <div class="content-wrapper">
-      <h1 class="subtitle is-5">Your fingerprint is: <code style="font-weight: bold" id="fingerprint"></code></h1>
+      <p class="subtitle is-5">
+        If you'd like us to erase all the data you've sent us, please copy the anonymous
+        fingerprint below and send it to us either via an email
+        (<a href="mailto:teamopendemic@gmail.com?subject=Forget%20Me">teamopendemic@gmail.com</a>)
+        or use the chat on the lower right to talk to us.
+      </p>
+      <h1 style="font-weight: bold" class="subtitle is-6">Your anonymous fingerprint is: <code id="fingerprint"></code></h1>
+      <p class="subtitle is-5">
+        Please note that this anonymous fingerprint only applies to this device.
+        If you've used Opendemic on other devices, you'll have to repeat the same procedure for each additional device.
+      </p>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
       <script type="text/javascript">
         async function sha256(message) {

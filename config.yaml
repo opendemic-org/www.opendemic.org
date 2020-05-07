@@ -176,8 +176,8 @@ params:
       icon: twitter
     - link: mailto:teamopendemic@gmail.com?subject=Contact
       icon: envelope
-    # - link: https://twitter.com/opendemic
-    #   icon: instagram
+    - link: https://instagram.com/opendemic
+      icon: instagram
     # - link: https://bitbucket.org/#
     #   icon: bitbucket
     # bulmalogo: true

@@ -1,0 +1,60 @@
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+{{- $contributors := index .Params "contributors" }}
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">{{ .Title }}</h1>
+        <h5 class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <h1 class="subtitle is-5">Your fingerprint is: <code style="font-weight: bold" id="fingerprint"></code></h1>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/2.1.0/fingerprint2.min.js"></script>
+      <script type="text/javascript">
+        async function sha256(message) {
+          const encoder = new TextEncoder();
+          const data = encoder.encode(message);
+          const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+          const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+          const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // convert bytes to hex string
+          return hashHex;
+        };
+
+        if (window.requestIdleCallback) {
+            requestIdleCallback(function () {
+                Fingerprint2.get(function (components) {
+                  console.log(components);
+                  // var values = components.map(function (component) { return component.value });
+                  // var murmur = Fingerprint2.x64hash128(values.join(''), 31);
+                  let components_str = JSON.stringify(components);
+                  let fp = sha256(components_str);
+                  // console.log(components_str);
+                  fp.then(result => {
+                    console.log(result);
+                    document.getElementById("fingerprint").innerHTML = result;
+                  });
+                });
+            })
+        } else {
+            setTimeout(function () {
+              Fingerprint2.get(function (components) {
+                console.log(components);
+                // var values = components.map(function (component) { return component.value });
+                // var murmur = Fingerprint2.x64hash128(values.join(''), 31);
+                let components_str = JSON.stringify(components);
+                let fp = sha256(components_str);
+                // console.log(components_str);
+                fp.then(result => {
+                  console.log(result);
+                  document.getElementById("fingerprint").innerHTML = result;
+                });
+              });
+            }, 500)
+        };
+      </script>
+    </div>
+  </div>
+</section>

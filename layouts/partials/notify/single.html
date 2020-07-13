@@ -1,0 +1,67 @@
+{{ partial "navbar.html" . }}
+{{ partial "navbar-clone.html" . }}
+{{- $contributors := index .Params "contributors" }}
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">{{ .Title }}</h1>
+        <h5 class="subtitle is-5 is-muted">{{ .Params.Subtitle }}</h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <div class="content-wrapper" style="padding-top: 20px;">
+      <article class="message">
+        <div class="message-header">
+          <p>How It Works</p>
+          <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <strong>Pellentesque risus mi</strong>, tempus quis placerat ut,
+            porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla.
+            Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur.
+            Aenean ac <em>eleifend lacus</em>, in mollis lectus.
+          </p>
+          <ol style="padding-top: 10px; padding-left: 25px;">
+            <li>Sign up for Notify</li>
+            <li>Email us at <a href="mailto:teamopendemic@gmail.com?subject=Notify">teamopendemic@gmail.com</a></li>
+          </ol>
+          <br>
+          <p>
+            <strong>Privacy notice:</strong> [some notes around privacy]
+          </p>
+        </div>
+      </article>
+      <form id="subscribe-form" action="">
+        <div class="field">
+          <label class="label is-medium">What's your first name?</label>
+          <div class="control has-icons-left has-icons-right">
+            <input
+            id="notify-contact-input"
+            name="notify-contact-input"
+            class="input is-medium"
+            type="text"
+            placeholder="First name">
+            <span class="icon is-medium is-left">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-medium">List emails or phones of all the contacts you'd like to notify (separate by commas):</label>
+          <div class="control has-icons-left has-icons-right">
+            <textarea
+            id="notify-circle-input"
+            name="notify-circle-input"
+            class="textarea is-medium"
+            placeholder="john@doe.com,+16665551234,steve@apple.com"
+            rows="3"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="button is-large primary-btn" style="font-weight: bold;">Sign Up</button>
+    </form>
+  </div>
+</div>
+</section>

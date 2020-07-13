@@ -22,6 +22,8 @@
       {{ partial "single/single.html" . }}
     {{ else if eq .Params.layout "forget_me" }}
       {{ partial "forget_me/single.html" . }}
+    {{ else if eq .Params.layout "notify" }}
+      {{ partial "notify/single.html" . }}
     {{ else }}
       {{ partial "single/single.html" . }}
     {{ end }}

@@ -55,6 +55,8 @@ params:
     # Terms and Privacy Policy
     privacy_url: /privacy
     terms_url: /terms
+    # notify
+    notify_url: /notify
     # Hero image (from static/images/___)
     image: illustrations/city_location.svg
     # Footer logos (from static/images/logos/clients/___.svg)
@@ -209,3 +211,5 @@ params:
           link: /press
         - text: Forget Me
           link: /forget-me
+        - text: Notify
+          link: /notify

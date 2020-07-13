@@ -25,8 +25,9 @@
             Aenean ac <em>eleifend lacus</em>, in mollis lectus.
           </p>
           <ol style="padding-top: 10px; padding-left: 25px;">
-            <li>Sign up for Notify</li>
-            <li>Email us at <a href="mailto:teamopendemic@gmail.com?subject=Notify">teamopendemic@gmail.com</a></li>
+            <li>Sign up for Notify.</li>
+            <li>Email us at <a href="mailto:teamopendemic@gmail.com?subject=Notify">teamopendemic@gmail.com</a> if you receive a COVID-19 diagnosis.</li>
+            <li>We will immediately notify all of your contacts so you don't have to.</li>
           </ol>
           <br>
           <p>
@@ -34,18 +35,32 @@
           </p>
         </div>
       </article>
-      <form id="subscribe-form" action="">
+      <form id="notify-form" action="">
         <div class="field">
-          <label class="label is-medium">What's your first name?</label>
+          <label class="label is-medium">Your first name</label>
           <div class="control has-icons-left has-icons-right">
             <input
-            id="notify-contact-input"
-            name="notify-contact-input"
+            id="notify-name-input"
+            name="notify-name-input"
             class="input is-medium"
             type="text"
             placeholder="First name">
             <span class="icon is-medium is-left">
               <i class="fa fa-user"></i>
+            </span>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label is-medium">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input
+            id="notify-email-input"
+            name="notify-email-input"
+            class="input is-medium"
+            type="email"
+            placeholder="Your email">
+            <span class="icon is-medium is-left">
+              <i class="fa fa-envelope"></i>
             </span>
           </div>
         </div>
